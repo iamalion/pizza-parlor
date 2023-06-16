@@ -18,6 +18,8 @@ function Pizza (size, ...toppings) {
   this.toppings = toppings;
 }
 -->
+#### Describe Pizza.prototype.cost()
+
 Test 3: It will assign a cost of $10 to a pizza with a "small" property, $15 to a "medium", and $20 to a "large".
 Code: myPizza("Medium","Cheese");
 Output: myPizza {size: "Medium", toppings: "Cheese", totalCost: 15}
