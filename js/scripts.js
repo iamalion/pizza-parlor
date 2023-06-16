@@ -48,11 +48,13 @@ function handleForm(event) {
     myPizza.cost();
     console.log(myPizza);
 
-
+    let finalCost = document.getElementById("output");
+    finalCost.append("Your total is: $" + myPizza.totalCost)
 }
 
 window.addEventListener("load",function() {
     let form = document.getElementById("pizza-form");
     form.addEventListener("submit", handleForm)
+
 })
 

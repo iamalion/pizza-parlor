@@ -7,15 +7,18 @@
 </head>
 <body>
     <div>
+        <img src="imgs/pizza.png" alt="Crust & Craft logo">
         <h1>Crust & Craft Pizzeria</h1>
         <p>established 2023 ©Crust & Craft Inc.</p>
     </div>
     <div>
         <h2>At Crust & Craft, we're not only handmaking our delicious pies by hand everyday, we're also serving up some of the best craft beers in the Northwest.</h2>
+    </div>
+    <div id="form-div">
         <form id="pizza-form">
             <p>All our pizzas start with a hand-tossed crust, tomato-basil sauce and mozzarella cheese (sub vegan cheese for $3)</p>
             <h3>What would you like?</h3>
-            <input type="radio" id="small" name="pizza-size" value="small">
+            <input type="radio" id="small" name="pizza-size" value="small" checked>
             <label for="small">Small (14in)</label><br>
             <input type="radio" id="medium" name="pizza-size" value="medium">
             <label for="medium">Medium (18in)</label><br>
@@ -42,6 +45,13 @@
             <label for="cheez">Sub vegan cheese +$3</label><br><br>
             <button id="submit-button" type="submit">Make my pizza!</button>
         </form>
+    </div>
+    <div id="calculateTotal" class="hidden">
+        <div id="styleReceipt">
+            <div class="receipt">
+                <h2 id="receiptID"></h2>
+                <p id="output"></p>
+            </div>
     </div>
     
 </body>
