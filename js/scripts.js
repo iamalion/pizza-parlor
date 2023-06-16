@@ -15,13 +15,13 @@ Pizza.prototype.cost = function () {
         this.totalCost = 20;
     } 
     for (let i = 0; i <this.toppings.length; i++){
-          if (this.toppings[i] === "Pepperoni" || this.toppings[i] === "Onions" || this.toppings[i] === "Olives"){
+          if (this.toppings[i] === "pepperoni" || this.toppings[i] === "onions" || this.toppings[i] === "olives"){
               this.totalCost += 1;
           }
-          if (this.toppings[i] === "Bacon" || this.toppings[i] ==="Pineapple" || this.toppings[i] === "Jalapeño Slices"){
+          if (this.toppings[i] === "bacon" || this.toppings[i] ==="pineapple" || this.toppings[i] === "jalapeno"){
               this.totalCost += 2;
           }
-          if (this.toppings[i] === "Fresh tomato" || this.toppings[i] === "Hot honey" || this.toppings[i] === "Sub vegan cheese") {
+          if (this.toppings[i] === "tomato" || this.toppings[i] === "honey" || this.toppings[i] === "cheez") {
             this.totalCost += 3;
           }
       }
