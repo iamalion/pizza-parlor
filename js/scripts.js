@@ -1,3 +1,5 @@
+//Business Logic
+
 function Pizza (size, ...toppings) {
     this.size = size;
     this.toppings = toppings;
@@ -24,3 +26,29 @@ Pizza.prototype.cost = function () {
           }
       }
 }
+
+//UI Logic
+function handleForm(event) {
+    event.preventDefault();
+    let sizeSelect = document.querySelector('input[name="pizza-size"]:checked').value;
+    console.log(sizeSelect)
+    if (sizeSelect.value === "small"){
+        console.log(sizeSelect.value);
+        sizeSelect = "small"
+    } else if (sizeSelect.value === "medium"){
+        sizeSelect = "medium"
+    } else if (sizeSelect.value === "large"){
+        sizeSelct = "large"
+    }
+    let myPizza = new Pizza(sizeSelect);
+    myPizza.cost();
+    console.log(myPizza);
+
+
+}
+
+window.addEventListener("load",function() {
+    let form = document.getElementById("pizza-form");
+    form.addEventListener("submit", handleForm)
+})
+
