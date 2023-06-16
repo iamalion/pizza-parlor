@@ -31,16 +31,20 @@ Pizza.prototype.cost = function () {
 function handleForm(event) {
     event.preventDefault();
     let sizeSelect = document.querySelector('input[name="pizza-size"]:checked').value;
-    console.log(sizeSelect)
-    if (sizeSelect.value === "small"){
-        console.log(sizeSelect.value);
+    
+    if (sizeSelect === "small"){
         sizeSelect = "small"
-    } else if (sizeSelect.value === "medium"){
+    } else if (sizeSelect === "medium"){
         sizeSelect = "medium"
-    } else if (sizeSelect.value === "large"){
-        sizeSelct = "large"
+    } else if (sizeSelect === "large"){
+        sizeSelect = "large"
     }
-    let myPizza = new Pizza(sizeSelect);
+    let toppingsSelect = document.querySelectorAll('input[name="pizza-toppings"]:checked');
+    let toppingsArray = [];
+    for (let i = 0; i < toppingsSelect.length; i++) {
+        toppingsArray.push(toppingsSelect[i].value);
+    }
+    let myPizza = new Pizza(sizeSelect, ...toppingsArray);
     myPizza.cost();
     console.log(myPizza);
 
