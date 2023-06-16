@@ -48,8 +48,15 @@ function handleForm(event) {
     myPizza.cost();
     console.log(myPizza);
 
+    document.getElementById("submit-button").disabled = true;
+
+    let reveal = document.querySelector("div#calculateTotal");
+    reveal.removeAttribute("class");
+
     let finalCost = document.getElementById("output");
     finalCost.append("Your total is: $" + myPizza.totalCost)
+
+    document.getElementById("start-over-button").classList.add("show-button");
 }
 
 window.addEventListener("load",function() {

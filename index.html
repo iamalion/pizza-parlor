@@ -3,20 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <script src="js/scripts.js"></script>
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Exo+2&display=swap" rel="stylesheet">
     <title>Pizza Parlor</title>
 </head>
 <body>
-    <div>
+    <div id="heading">
         <img src="imgs/pizza.png" alt="Crust & Craft logo">
         <h1>Crust & Craft Pizzeria</h1>
-        <p>established 2023 ©Crust & Craft Inc.</p>
+        <h6>established 2023 ©Crust & Craft Inc.</h6>
+        <p>At Crust & Craft, we're not only handmaking our delicious pies by hand everyday, we're also serving up some of the best craft beers in the Northwest.<p>    
     </div>
-    <div>
-        <h2>At Crust & Craft, we're not only handmaking our delicious pies by hand everyday, we're also serving up some of the best craft beers in the Northwest.</h2>
-    </div>
-    <div id="form-div">
+        <div>
+            <p id="center">All our pizzas start with a hand-tossed crust, tomato-basil sauce and mozzarella cheese (sub vegan cheese for $3)</p></p>
+        </div>
+        <div id="calculateTotal" class="hidden">
+            <div id="styleReceipt">
+                <div class="receipt">
+                    <h2 id="receiptID"></h2>
+                    <p id="output"></p>
+                </div>
+            </div>
+        </div>
+        <div id="form-div">
         <form id="pizza-form">
-            <p>All our pizzas start with a hand-tossed crust, tomato-basil sauce and mozzarella cheese (sub vegan cheese for $3)</p>
+            
             <h3>What would you like?</h3>
             <input type="radio" id="small" name="pizza-size" value="small" checked>
             <label for="small">Small (14in)</label><br>
@@ -43,16 +56,13 @@
             <label for="honey">Hot Honey +$3</label><br>
             <input type="checkbox" id="cheez" name="pizza-toppings" value="cheez">
             <label for="cheez">Sub vegan cheese +$3</label><br><br>
-            <button id="submit-button" type="submit">Make my pizza!</button>
+            <div id="button-div">
+                <button id="submit-button" type="submit">Make my pizza!</button>
+                <button id="start-over-button" class="hidden" onclick="location.reload()">Start over</button>
+            </div>
         </form>
     </div>
-    <div id="calculateTotal" class="hidden">
-        <div id="styleReceipt">
-            <div class="receipt">
-                <h2 id="receiptID"></h2>
-                <p id="output"></p>
-            </div>
-    </div>
+    
     
 </body>
 </html>
